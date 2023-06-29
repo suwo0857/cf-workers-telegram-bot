@@ -4,4 +4,4 @@ main = "packages/worker/dist/worker/src/worker.mjs"
 workers_dev = true
 compatibility_date = "2023-06-25"
 
-build.command = "npm install && npm run build:worker"
+build.command = "npm install && npm run build:rust && npm run build:worker"
