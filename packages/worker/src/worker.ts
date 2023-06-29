@@ -43,6 +43,7 @@ export default {
 					"/set": TelegramCommands._set as Command,
 					"/duckduckgo": TelegramCommands.duckduckgo as Command,
 					"/code": TelegramCommands.code as Command,
+					"/rust": TelegramCommands.rust as Command,
 					"/commands": TelegramCommands.commandList as Command,
 					"/help": TelegramCommands.commandList as Command,
 					"/start": TelegramCommands.commandList as Command,
@@ -87,5 +88,7 @@ export default {
 					"/start": TelegramCommands.commandList as Command,
 				},
 			},
-		]).handle(request).then(() => new Response()),
+		])
+			.handle(request)
+			.then(() => new Response()),
 };

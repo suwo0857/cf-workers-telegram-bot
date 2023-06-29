@@ -6,6 +6,7 @@ import {
 	responseToJSON,
 } from "./libs";
 import TelegramApi from "./telegram_api";
+import { greet } from "../../rust/pkg/rust.js";
 import {
 	Joke,
 	Bored,
@@ -34,6 +35,10 @@ export default class TelegramBot extends TelegramApi {
 		this.kv = config.kv as Kv;
 		this.get_set = config.kv?.get_set as KVNamespace;
 	}
+
+	// bot command: /rust
+	rust = async (update: TelegramUpdate): Promise<Response> =>
+		this.sendMessage(update.message?.chat.id ?? 0, greet());
 
 	// bot command: /code
 	code = async (update: TelegramUpdate): Promise<Response> =>
