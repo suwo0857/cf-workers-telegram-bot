@@ -6,7 +6,7 @@ import {
 	responseToJSON,
 } from "./libs";
 import TelegramApi from "./telegram_api";
-import { greet } from "../../rust/pkg/rust.js";
+import { greet } from "../../rust/pkg/rust";
 import {
 	Joke,
 	Bored,
