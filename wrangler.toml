@@ -4,4 +4,4 @@ main = "packages/worker/dist/worker/src/worker.mjs"
 workers_dev = true
 compatibility_date = "2023-06-25"
 
-build.command = "npm install && curl https://sh.rustup.rs -sSf | sh -s -- -y && cargo install wasm-pack && npm run build:rust && npm run build:worker"
+build.command = "npm install && curl https://sh.rustup.rs -sSf | sh -s -- -y && source ~/.bashrc && cargo install wasm-pack && npm run build:rust && npm run build:worker"
